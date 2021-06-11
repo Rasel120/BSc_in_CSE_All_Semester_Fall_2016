@@ -1,0 +1,3 @@
+1: SELECT DISTINCT * FROM `product` 
+2: SELECT * FROM `product` ORDER BY `price`
+3: UPDATE product SET `price`=100 WHERE `pro_name`= 'kitkat';

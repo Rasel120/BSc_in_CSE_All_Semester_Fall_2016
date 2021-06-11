@@ -1,0 +1,12 @@
+01: SELECT * FROM `student2` WHERE `std_id`=104;
+02: SELECT * FROM `student2` WHERE `std_add`='dhanmondi';
+03: SELECT * FROM `student2` WHERE `DOB`='2018-12-24';
+04: SELECT * FROM `student2`
+05: CREATE TABLE student04
+(
+std_id int(10),
+std_name varchar (20),
+std_add varchar(30),
+std_mob int(13),
+DoB Date,
+);

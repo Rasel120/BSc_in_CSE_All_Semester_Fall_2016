@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+int main()
+{
+    int arrival_t[20],burst_t[20],service_t[20],i;
+    float avg1,avg,total_wait=0,total_turn=0,n;
+    char process[]={'1','2','3','4','5','6','7',};
+
+    printf("Enter the process numbers: ");
+    scanf("%f",&n);
+    printf("\n");
+
+    for(i=0;i<n;i++)
+    {
+        printf("Enter Arrival Time %c: ", process[i]);
+        scanf("%d",&arrival_t[i]);
+    }
+
+     printf("\n");
+
+    for(i=0;i<n;i++)
+    {
+        printf("Enter Burst Time %c: ", process[i]);
+        scanf("%d",&burst_t[i]);
+    }
+
+    service_t[0]=0;
+    printf("\nService Time %c: %d\n",process[0],service_t[0]);
+    for(i=1;i<n;i++)
+    {
+        service_t[i]=service_t[i-1]+burst_t[i-1];
+        printf("Service Time %c: %d\n",process[i],service_t[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("\nWaiting Time %c: %d",process[i],service_t[i]-arrival_t[i]);
+        total_wait=total_wait+service_t[i]-arrival_t[i];
+    }
+    
+    printf("\n\n");
+
+    for(i=0;i<n;i++)
+    {
+        printf("Turnaround Time %c: %d\n",process[i],(service_t[i]-arrival_t[i])+burst_t[i]);
+        total_turn=total_turn+(service_t[i]-arrival_t[i])+burst_t[i];
+    }
+
+    avg1 = total_wait/n;
+    avg = total_turn/n;
+
+    printf("\nAverage Waiting Time: %.3f\nAverage Turnaround Time: %.3f", avg1,avg);
+
+
+    return 0;
+}
