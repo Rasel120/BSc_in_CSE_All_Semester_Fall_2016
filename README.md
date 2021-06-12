@@ -1,4 +1,3 @@
-# BSc_in_CSE_All_Semester
+# BSc in CSE All Semester
+#### IF Need a Single Part Download Follow This Link [Google Drive](https://drive.google.com/drive/folders/1-UlSzAao9XcwNVxAkoYwrwb1nELDqGjO?usp=sharing)
 
-#### [Google Drive link](https://drive.google.com/drive/folders/1-UlSzAao9XcwNVxAkoYwrwb1nELDqGjO?usp=sharing)
-#### BSc in CSE All Semester
