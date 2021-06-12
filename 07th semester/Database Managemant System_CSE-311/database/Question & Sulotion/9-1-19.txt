@@ -1,0 +1,11 @@
+1.INSERT INTO order2 (`o_id`,`date`,`cust_id`,`amount`)
+VALUES 
+(100, 2019/02/15, 101, 18000),
+(101, 2019/02/16, 102, 15000),
+(102, 2019/02/17, 103, 13000);
+2. SELECT c.`cust_id`,c.`cust_name`,o.amount FROM customer2 AS C, order2 AS O WHERE c.cust_id = o.cust_id
+3. SELECT `cust_id`as ID, `cust_name`as Name FROM customer2
+4. SELECT avg(`cust_salary`) as new_salary FROM customer2;
+5. SELECT `amount` FROM `order2` WHERE `amount` BETWEEN 15000 AND 20000
+6. SELECT `cust_id`,`cust_name` FROM `customer2` WHERE `cust_id` IN(101,102,103)
+7. SELECT `cust_name` FROM `customer2` WHERE `cust_name` LIKE 'h%';

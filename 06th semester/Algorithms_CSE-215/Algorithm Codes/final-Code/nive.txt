@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+void naiv (char str1[], char str2[]);
+int main()
+
+{
+    int n;
+    char str1[100],str2[100];
+    gets(str1);
+    gets(str2);
+    naiv(str1,str2);
+    return 0;
+}
+
+void naiv (char str1[], char str2[])
+
+{
+    int n, m, p,q;
+    m=strlen(str1);
+    n=strlen(str2);
+    for(p=0;p<m-n+1;p++){
+        for(q=0;q<n;q++){
+            if(str1[p+q]!=str2[q])
+                break;
+        }
+         if(q==n)
+            printf("pattern found at %d\n", p);
+
+    }
+
+
+}

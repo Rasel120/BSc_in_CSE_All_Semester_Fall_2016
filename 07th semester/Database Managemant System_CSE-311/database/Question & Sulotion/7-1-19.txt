@@ -1,0 +1,6 @@
+1:SELECT Cust_name, CONCAT(Address,',',PostalCode,',',City,',',Country)
+  AS ADDRESS FROM customer 
+
+2: ORDER TABLE :- INSERT INTO `hossain`.`order` (`Order_id`, `Order_date`, `Cust_id`) VALUES ('100', '2019-01-15', '101'), ('101', '2019-01-17', NULL), ('102', '2019-01-18', NULL), 
+   ('103', '2019-01-21', NULL), ('104', '2019-01-22', NULL);
+3: 

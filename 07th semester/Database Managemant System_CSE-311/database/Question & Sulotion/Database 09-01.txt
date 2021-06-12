@@ -1,0 +1,15 @@
+1. SELECT c.`cst_id`, c.`name`, c.`age`, o.amount FROM `customers` AS c, orders AS o WHERE c.cst_id=o.cus_id;
+
+2. SELECT `cst_id` AS ID, `name` AS Customer_name FROM `customers`;
+
+3. SELECT avg(`salary`) as New_Salary FROM `customers`;
+
+4. SELECT (`salary`*0.1)+`salary` as New_Salary FROM `customers`; 
+
+5. SELECT * FROM `orders` WHERE `amount` BETWEEN 1000 AND 2000;
+
+6. SELECT `cst_id`,`name` FROM `customers` WHERE `cst_id` IN(101,106,109);
+
+7. SELECT  `name` AS CUSTOMER_NAME
+FROM  `customers` 
+WHERE  `name` LIKE  'M%';

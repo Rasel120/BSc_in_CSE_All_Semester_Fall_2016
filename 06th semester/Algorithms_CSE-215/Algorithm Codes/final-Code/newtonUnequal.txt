@@ -1,0 +1,26 @@
+clc
+clear
+
+x=[5 7 11 13 21];
+y=[150 392 1452 2366 9702];
+
+
+p=input('Z=');
+
+dely0=(y(1)-y(2))/(x(1)-x(2));
+dely1=(y(2)-y(3))/(x(2)-x(3));
+dely2=(y(3)-y(4))/(x(3)-x(4));
+dely3=(y(4)-y(5))/(x(4)-x(5));
+fprintf('%f\t%f\t%f\t%f\n',dely0,dely1,dely2,dely3);
+
+delsy0=(dely0-dely1)/(x(1)-x(3));
+delsy1=(dely1-dely2)/(x(2)-x(4));
+delsy2=(dely2-dely3)/(x(3)-x(5));
+fprintf('%f\t%f\t%f\n',delsy0,delsy1,delsy2);
+
+delcy0=(delsy0-delsy1)/(x(1)-x(4));
+delcy1=(delsy1-delsy2)/(x(2)-x(5));
+fprintf('%f\t%f\n',delcy0,delcy1);
+
+fx=y(1)+(p-x(1))*dely0+(p-x(1))*(p-x(2))*delsy0+(p-x(1))*(p-x(2))*(p-x(3))*delcy0;
+disp(fx);

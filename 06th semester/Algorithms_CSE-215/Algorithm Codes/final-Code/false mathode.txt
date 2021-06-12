@@ -1,0 +1,41 @@
+clc
+clear
+x1=input('x1=');
+x2=input('x2=');
+
+for k=1:1:15
+    t(k)=k;
+    a(k)=x1;
+    b(k)=x2;
+    
+    fx1(k)=x1^2-x1-2;
+    fx2(k)=x2^2-x2-2;
+    c(k)=x1-(fx1*(x2-x1))/(fx2-fx1);
+    x3=c(k);
+    fx3(k)=x3^2-x3-2;
+    
+    if k>1
+        l(k)=((c(k)-c(k-1))/c(k))*100;
+        m(k)=abs(l(k));
+        
+        if m(k)<=0.001
+            break;
+        end
+    end
+    
+    if fx1(k)*fx3(k)<0
+        x2=x3;
+    end
+    if   fx1(k)*fx3(k)>0   
+        x1=x3;
+    end
+    
+end
+
+result=[t'a'b'fx1'fx2'c'fx3'm'];
+
+disp('-----------------------------------------------------------------------------');
+disp('iteration a  b  fx1 fx2 c fx3 error');
+disp(result);
+
+root(c)

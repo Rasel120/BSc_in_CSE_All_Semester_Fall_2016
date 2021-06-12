@@ -1,0 +1,18 @@
+clc
+clear
+x(1)=input('x(1): ');
+y(1)=input('y(1): ');
+h=input('h: ');
+n=input('itteration: ');
+
+y(2)=x(1)+y(1);
+
+for k= 2:1:n
+    y(1)=0;
+    y(2)=x(1)+y(1);
+    y(k+1)=x(1)+y(k);
+ end
+ disp(y);
+ ans= y(1)+h/factorial(1)*y(2)+h^2/factorial(2)*y(3)+h^3/factorial(3)*y(4)+h^4/factorial(4)*y(4);
+ fprintf('the value of y1 is:  %0.5f',ans);
+ 
