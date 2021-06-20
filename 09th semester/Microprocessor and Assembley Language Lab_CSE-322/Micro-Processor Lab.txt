@@ -1,0 +1,36 @@
+
+org 100h
+mov ax,5;set ax to 5.
+mov bx,2;set bx to 2.
+jmp calc; go to'calc'.
+back:jmp stop;go to 'stop'.
+calc:
+add ax,bx;add bx to ax.
+jmp back;go 'back'.
+stop:
+ret
+
+
+
+
+org 100h
+mov ax,1234h
+push ax;store vaue of ax in stack.
+mov ax,5678h;modify the ax value.
+pop ax;restore the original value of 
+ret 
+end
+
+
+Push pop Instruction
+
+org 100h
+mov ax,1234h;store1212h in ax.
+mov bx,3434h;store3434h in bx.
+push ax;store value of ax in stack.
+push bx;store value of bx in stack.
+pop ax; set ax to original value of ax.
+pop bx; setbax to original value of bx.
+
+ret 
+end
